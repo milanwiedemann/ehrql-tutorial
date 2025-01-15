@@ -4,6 +4,7 @@ from ehrql.tables.core import patients, clinical_events, practice_registrations
 index_date = "2024-03-31"
 
 dataset = create_dataset()
+dataset.configure_dummy_data(population_size=1000)
 
 # Patient is alive
 dataset.is_alive = patients.is_alive_on(index_date)
